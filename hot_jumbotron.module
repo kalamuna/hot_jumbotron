@@ -1,0 +1,58 @@
+<?php
+/**
+ * @file
+ * Code for the Kalamuna Picture Pane for responsive images across multiple pages
+ */
+
+include_once 'hot_jumbotron.features.inc';
+
+/**
+ * Implementation of hook_entity_info_alter()
+ */
+function hot_jumbotron_entity_info_alter(&$entity_info) {
+  // Fieldable panel pane bundle to support call-to-action
+  $entity_info['fieldable_panels_pane']['bundles']['hot_jumbotron_full'] = array(
+    'label' => t('Add full width responsive image, Jumbotron'),
+    'pane category' => t('Custom'),
+    'pane top level' => TRUE,
+    'pane icon' => drupal_get_path('module', 'panopoly_widgets') . '/images/icon_image.png',
+    'admin' => array(
+      'path' => 'admin/structure/fieldable-panels-panes/manage/%fieldable_panels_panes_type',
+      'bundle argument' => 4,
+      'real path' => 'admin/structure/fieldable-panels-panes/manage/hot_jumbotron_full',
+      'access arguments' => array('administer fieldable panels panes'),
+    ),
+  );
+}
+
+
+/**
+ * Implements hook_system_info_alter().
+ */
+
+
+/**
+ * Implements hook_preprocess_panels_pane().
+ */
+function hot_jumbotron_preprocess_panels_pane(&$variables){
+  if(isset($variables['content']['#bundle'])){
+    $bundle = $variables['content']['#bundle'];
+    if(strpos($bundle, 'hot_jumbotron') === 0){
+
+      $variables['theme_hook_suggestions'][] = 'fieldable_panels_panes__hot_jumbotron';
+      
+    }
+
+  }
+}
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function hot_jumbotron_theme_registry_alter(&$theme_registry) {
+  $theme_registry['fieldable_panels_panes__hot_jumbotron'] = array(
+    'template' => drupal_get_path('module', 'hot_jumbotron') . '/templates/fieldable-panels-panes--hot-jumbotron',
+    'theme path' => drupal_get_path('module', 'hot_jumbotron'),
+    'type' => 'module',
+  );
+}
