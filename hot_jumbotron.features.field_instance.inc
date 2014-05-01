@@ -72,7 +72,7 @@ function hot_jumbotron_field_default_field_instances() {
     'label' => 'Jumbotron Image',
     'required' => 0,
     'settings' => array(
-      'alt_field' => 0,
+      'alt_field' => 1,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
