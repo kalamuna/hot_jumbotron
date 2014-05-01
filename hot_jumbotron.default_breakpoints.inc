@@ -61,6 +61,22 @@ function hot_jumbotron_default_breakpoints() {
   $breakpoint = new stdClass();
   $breakpoint->disabled = FALSE; /* Edit this to true to make a default breakpoint disabled initially */
   $breakpoint->api_version = 1;
+  $breakpoint->machine_name = 'breakpoints.hot_jumbotron.screen-xl';
+  $breakpoint->name = 'screen-xl';
+  $breakpoint->breakpoint = '(min-width: 1400px)';
+  $breakpoint->source = 'hot_jumbotron';
+  $breakpoint->source_type = 'module';
+  $breakpoint->status = 1;
+  $breakpoint->weight = 4;
+  $breakpoint->multipliers = array(
+    '1x' => '1x',
+    '2x' => '2x',
+  );
+  $export['breakpoints.hot_jumbotron.screen-xl'] = $breakpoint;
+
+  $breakpoint = new stdClass();
+  $breakpoint->disabled = FALSE; /* Edit this to true to make a default breakpoint disabled initially */
+  $breakpoint->api_version = 1;
   $breakpoint->machine_name = 'breakpoints.hot_jumbotron.screen-xs';
   $breakpoint->name = 'screen-xs';
   $breakpoint->breakpoint = '(min-width: 480px)and (max-width: 767px)';

@@ -18,7 +18,7 @@ function hot_jumbotron_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
@@ -55,7 +55,7 @@ function hot_jumbotron_field_default_field_instances() {
     'description' => '',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'picture',
         'settings' => array(
           'colorbox' => 'hot_jumbotron',
@@ -96,8 +96,8 @@ function hot_jumbotron_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Jumbotron Image');
   t('Caption');
+  t('Jumbotron Image');
 
   return $field_instances;
 }

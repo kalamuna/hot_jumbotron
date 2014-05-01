@@ -12,11 +12,12 @@ function hot_jumbotron_default_breakpoint_group() {
 
   // Breakpoints.
   $breakpoints = array();
-  $breakpoints[] = 'breakpoints.hot_jumbotron.screen-xxs';
   $breakpoints[] = 'breakpoints.hot_jumbotron.screen-xs';
+  $breakpoints[] = 'breakpoints.hot_jumbotron.screen-xxs';
   $breakpoints[] = 'breakpoints.hot_jumbotron.screen-sm';
   $breakpoints[] = 'breakpoints.hot_jumbotron.screen-md';
   $breakpoints[] = 'breakpoints.hot_jumbotron.screen-lg';
+  $breakpoints[] = 'breakpoints.hot_jumbotron.screen-xl';
 
   // Breakpoint group.
   $breakpoint_group = new stdClass();
