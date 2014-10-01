@@ -4,6 +4,8 @@ Hot JUMBOTRON!
 CAUTION
 ===========
 
+**THIS SEEMS TO NOT WORK AT ALL**
+
 This is just the alpha version.  in the hot_jumbotron.features.inc there are image styles, but image styles in drupal only wants an integer value.  Withink this file all the values are width => 100%, which wont work.  Someone is working on something similair and I will update this then
 
 This app is a Fieldable Panel Pane with responsive imaging.  This FPP will go the full width of the container as it is a JUMBOTROM.
